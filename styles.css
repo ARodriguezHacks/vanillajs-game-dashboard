@@ -1,0 +1,80 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: aquamarine;
+}
+
+.app .header {
+  background-image: url("./assets/switch_mario_kart.jpeg");
+  background-origin: border-box;
+  background-position: center;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+/* Main */
+.main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.main .section::before {
+  content: "\1F49C";
+}
+
+.aside {
+  grid-column: 1/4;
+  grid-row: 1/5;
+  background-color: rgb(196, 248, 255);
+}
+
+.section {
+  background-color: bisque;
+}
+
+.section-1 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.section-2 {
+  grid-column-start: 7;
+  grid-column-end: 10;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.section-3 {
+  grid-column-start: 10;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.5rem;
+  background-color: #fff;
+}

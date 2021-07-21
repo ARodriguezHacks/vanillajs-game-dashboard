@@ -6,14 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" type="module" defer></script>
+    <script src="./player.js" type="module" defer></script>
+    <script src="./api.js" type="module" defer></script>
     <title>JavaScript Game 1</title>
   </head>
 
-  <body>
-    <header id="header">Header</header>
-    <main id="main">Body</main>
-    <footer id="footer">Footer</footer>
-    <script src="./script.js"></script>
+  <body class="app" id="app">
+    <header id="header" class="header">
+      <nav id="nav" class="nav">
+        <ul class="nav-list">
+          <li class="nav-list__item">JS Game-1</li>
+          <li class="nav-list__item">About</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="main">
+      <aside class="aside">
+        Sidebar
+      </aside>
+      <section class="section section-1">
+        Section 1
+      </section>
+      <section class="section section-2">
+        Section 2
+      </section>
+      <section class="section section-3">
+        Section 3
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">Footer</footer>
   </body>
 
 </html>
