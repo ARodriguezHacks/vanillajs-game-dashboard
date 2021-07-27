@@ -26,49 +26,12 @@ if (times > 3) {
   var greeting = "say Hello instead";
   let farewell = "Bye!";
 }
-// let will throw an error because let has block scoping
 
-// console.log(greeting);
-// console.log(farewell);
+// export { playerAngie };
 
-function hello() {
-  var something = "¿Qué cosa?";
-}
-// error because the var is in function scope
+// createRecipe();
 
-// console.log(something);
-
-// console.log(person);
-
-// let person = "Josh";
-
-// console.log(petDog);
-
-// var petDog = "Froggy";
-
-const person = {
-  name: "Fry",
-  profession: "Delivery Boy",
-};
-console.log(person.name);
-// Fry
-person.name = "Bender";
-console.log(person.name);
-// Bender
-
-export { playerAngie };
-
-// function orderPizza() {
-//   let mainTopping = "Pepperoni";
-//   let secondTopping = "Anchovies";
-//   return `I want to order a pizza with ${mainTopping} and ${secondTopping}, please.`;
-// }
-
-// if (1 > 0) {
-//   let;
-// }
-
-// const value = orderPizza();
-// console.log(value);
-
-// console.log(mainTopping);
+// const createRecipe = () => {
+//   const recipe = "Meatballs";
+//   return `I want to order ${recipe}`;
+// };
