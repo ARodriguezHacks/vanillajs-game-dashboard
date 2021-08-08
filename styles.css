@@ -14,20 +14,28 @@ body {
   background-color: aquamarine;
 }
 
-.app .header {
+.app-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./assets/switch_mario_kart.jpeg");
   background-origin: border-box;
   background-position: center;
   min-height: 50vh;
+  grid-column: 2/13;
+  grid-row: 1/2;
 }
 
 .header > * {
   color: #fff;
 }
 
-.header .nav,
-.main {
+.header .nav-header {
   max-width: 90vw;
   margin: 0 auto;
 }
@@ -60,56 +68,70 @@ div.header-title h1 {
   transform: translateY(30%);
 }
 
+/* Sider */
+.aside {
+  grid-column: 1/2;
+  grid-row: 1/6;
+  background-color: rgb(196, 248, 255);
+}
+
 /* Main */
 .main {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 0.5rem;
   min-height: 60vh;
+  display: grid;
+  grid-column: 2/13;
+  grid-row: 2/6;
+  grid-template-columns: subgrid;
+  grid-template-rows: 1fr;
+  gap: 0.5rem;
 }
 
 .main .section::before {
   content: "\1F49C";
 }
 
-.aside {
-  grid-column: 1/4;
-  grid-row: 1/5;
-  background-color: rgb(196, 248, 255);
-}
-
 .section {
   background-color: bisque;
+  max-width: 90%;
 }
 
 .section-1 {
-  grid-column-start: 4;
-  grid-column-end: 7;
+  grid-column-start: 1;
+  grid-column-end: 5;
   grid-row-start: 1;
-  grid-row-end: 5;
+  grid-row-end: 2;
 }
 
 .section-2 {
-  grid-column-start: 7;
-  grid-column-end: 10;
+  grid-column-start: 5;
+  grid-column-end: 9;
   grid-row-start: 1;
-  grid-row-end: 5;
+  grid-row-end: 2;
 }
 
 .section-3 {
-  grid-column-start: 10;
+  grid-column-start: 9;
   grid-column-end: 13;
   grid-row-start: 1;
-  grid-row-end: 5;
+  grid-row-end: 2;
 }
 
 /* Footer */
 .footer {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 0.5rem;
   background-color: #fff;
   min-height: 40vh;
+  grid-column: 1/13;
+  grid-row: 6/7;
+}
+
+.footer .nav-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  justify-items: center;
+}
+
+.footer .nav-footer .nav-footer-section ul {
+  list-style: none;
+  text-align: center;
 }
