@@ -15,3 +15,9 @@ randomMessage.then((value) => {
 });
 
 console.log(randomMessage);
+
+const images = fetch("https://picsum.photos/v2/list?limit=3")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
+
+console.log(images);
